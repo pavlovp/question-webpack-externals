@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>React App</title>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@latest/dist/system.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
+
 
   <script type="systemjs-importmap">
     {
       "imports": {
-        "lib": "./lib.js"
+        "lib": "./lib.js",
+        "react": "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
       }
     }
   </script>

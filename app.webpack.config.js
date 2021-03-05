@@ -6,7 +6,6 @@ const webpack = require("webpack");
 module.exports = function(_env, argv) {
 
   return {
-    devtool: "cheap-module-source-map",
     entry: "./src/app/index.js",
     mode: 'development',
     devtool: "inline-source-map",
@@ -17,7 +16,9 @@ module.exports = function(_env, argv) {
       libraryTarget: "system",
     },
     externals: {
-      'lib': 'system lib'
+      'lib': 'system lib',
+      'react': 'react',
+      'react-dom': 'react-dom'
     },
     module: {
       rules: [

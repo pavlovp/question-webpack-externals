@@ -3,7 +3,6 @@ const path = require("path");
 module.exports = function(_env, argv) {
 
   return {
-    devtool: "cheap-module-source-map",
     entry: "./src/lib/index.js",
     devtool: "inline-source-map",
     mode: 'development',
@@ -14,7 +13,9 @@ module.exports = function(_env, argv) {
       libraryTarget: "system",
     },
     externals: {
-      'lib': 'system lib'
+      'lib': 'system lib',
+      'react': 'react',
+      'react-dom': 'react-dom'
     },
     module: {
       rules: [
